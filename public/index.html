@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="style.css">
+	<title>WW-II AirForce Tracker Database</title>
+</head>
+
+<body>
+	<div class="row" id="menu-container">
+		<div id="project-title">
+			<h1>
+				WW-II AirForce Tracker Database
+			</h1>
+		</div>
+		<div id="menus">
+			<div id="menu-row-1" class="row">
+				<div id="m1-div">
+					<button onclick="window.location.href = 'aircraft.html';"> Aircraft </button>
+				</div>
+				<div id="m2-div">
+					<button onclick="window.location.href = 'mechanic.html';"> Mechanic </button>
+				</div>
+			</div>
+			<div id="menu-row-2" class="row">
+				<div id="m3-div">
+					<button onclick="window.location.href = 'mission.html';"> Mission </button>
+				</div>
+				<div id="m4-div">
+					<button onclick="window.location.href = 'pilot.html';"> Pilots & Crews </button>
+				</div>
+			</div>
+			<div id="menu-row-4" class="row">
+				<div id="m5-div">
+					<button class="button" onclick="window.location.href = 'add-record.html';">Add New Record</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<h1>Database Connection Status:
+		<!-- An in-line placeholder to display connection status. -->
+		<span id="dbStatus"> </span>
+		<!-- A loading GIF, will be hided once get the status. -->
+		<img id="loadingGif" class="loading-gif" src="loading_100px.gif" alt="Loading...">
+	</h1>
+	<!-- ===================================================================================== -->
+	<!-- External JavaScript file that contains the functionality/logic for the operations above. -->
+	<script src="script.js"></script>
+</body>
+</html>

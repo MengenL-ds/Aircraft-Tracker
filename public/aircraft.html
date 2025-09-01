@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="style.css">
+	<script src="script.js"></script>
+	<title>Aircraft</title>
+</head>
+<body>
+	<div class="menu-header">
+		<h2>Aircrafts</h2>
+	</div>
+	<div class="row content-area">
+		<div class="item-list">
+			<ul>
+				<li>
+					<button onclick="fetchMaxAvgDowntime()">
+						Fetch max avg downtime
+					</button>
+				</li>
+			</ul>
+		</div>
+		<div class="modal-container">
+			<div class="modal">
+				<h3>Assign Maintenance Task</h3>
+				<label>Maintenance ID:</label>
+				<input type="text" id="assignMaintenanceID" placeholder="Enter Maintenance ID" required>
+
+				<label>Aircraft ID:</label>
+				<input type="text" id="assignAircraftID" placeholder="Enter Aircraft ID" required>
+
+				<button onclick="assignMaintenance()">Assign</button>
+			</div>
+			<div class="modal">
+				<h3>Complete Maintenance Task</h3>
+				<label>Maintenance ID:</label>
+				<input type="text" id="maintenanceID" placeholder="Enter Maintenance ID" required>
+
+				<button onclick="completeMaintenanceTask()">Complete</button>
+			</div>
+			<div class="modal">
+				<h3>Add Damage</h3>
+
+				<label for="damageAircraftID">Aircraft ID:</label>
+				<input type="text" id="damageAircraftID" placeholder="Enter Aircraft ID">
+
+				<label>Damage part:</label>
+				<input type="text" id="damagePart" placeholder="Enter damagePart">
+
+				<label>Damage date:</label>
+				<input type="text" id="damageDate" placeholder="Enter damageDate">
+
+				<button onclick="addDamage()">Submit</button>
+			</div>
+			<div class="modal">
+				<h3>Assign aircraft</h3>
+
+				<label >Aircraft ID:</label>
+				<input type="text" id="aircraftID" required>
+
+				<label >crew ID:</label>
+				<input type="text" id="crewID" required>
+
+				<button onclick="assignCrewToAircraft()">Submit</button>
+			</div>
+		</div>
+		<table id="aircraftTable">
+			<thead>
+			<tr>
+				<th>Aircraft ID</th>
+				<th>Year Introduced</th>
+				<th>Model</th>
+				<th>Manufacturer</th>
+				<th>Main Weapon</th>
+				<th>Crew ID</th>
+				<th>Maintenance ID</th>
+				<th>Damaged Part</th>
+				<th>Date of Damage</th>
+			</tr>
+			</thead>
+			<tbody>
+			<!-- Table data will be inserted here by JavaScript -->
+			</tbody>
+		</table>
+	</div>
+	<!-- Popup Overlay -->
+	<div id="popupOverlay" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5); z-index: 1000;"></div>
+
+	<!-- Popup Modal -->
+	<div id="popupModal" style="display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 400px; background: white; padding: 20px; z-index: 1001; box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); border-radius: 8px;">
+		<h2>Popup Title</h2>
+		<p>Popup Content Here</p>
+		<button onclick="closePopup()">Close</button>
+	</div>
+	<div class="row footer">
+		<button class="button" onclick="window.location.href = 'index.html';">Cancel</button>
+		<button class="button" onclick="removeAircraft()">Remove aircraft</button>
+	</div>
+</body>
+</html>

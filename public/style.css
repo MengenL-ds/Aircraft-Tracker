@@ -1,0 +1,238 @@
+body {
+	overflow-x: hidden;
+}
+
+#menu-container {
+	height: 100%;
+	flex-direction: column;
+	padding: 20px;
+	justify-content: center;
+}
+
+.row {
+	display: flex;
+	width: 100%;
+}
+
+#menu-row-1 {
+	display: flex;
+	padding: 20px;
+}
+
+#menu-row-2 {
+	display: flex;
+	padding: 20px;
+
+}
+
+#project-title {
+	text-align: center;
+}
+
+#menus {
+	flex-direction: column;
+	align-items: center;
+	display: flex;
+	padding: 20px;
+}
+
+#menus button {
+	background-color: blue;
+	color: white;
+	font-size: 20px;
+	padding: 20px;
+	width: 100%;
+	cursor: pointer;
+}
+
+#menus div {
+	width: 100%;
+	padding: 10px;
+	margin: 10px;
+	text-align: center;
+}
+
+.menu-header {
+	border: 2px solid black;
+	display: flex;
+	padding: 0px 10px;
+}
+
+.content-area {
+	padding: 10px;
+	padding-left: 0px;
+	height: 70%;
+}
+
+.footer {
+	padding: 10px;
+	padding-left: 0px;
+}
+
+.footer button {
+	margin-right: 10px;
+	width: 100px;
+}
+
+.button {
+	background-color: blue;
+	color: white;
+	font-size: 14px;
+	border: none;
+	padding: 10px;
+	z-index: 1000;
+}
+
+.item-list {
+	width: 30%;
+	border: 1px solid black;
+	margin-right: 10px;
+}
+
+.item-details {
+	width: 50%;
+	border: 1px solid black;
+	padding: 10px;
+}
+
+#category-div {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 10px;
+}
+
+#add-record-content-area {
+	flex-direction: column;
+}
+
+#category-div select {
+	margin-left: 10px;
+}
+
+.button-large {
+	width: 200px;
+}
+
+#add-record-details-div {
+	border: 1px solid black;
+	padding: 10px;
+	display: flex;
+	width: calc(100% - 20px);
+	height: 300px;
+	flex-wrap: wrap;
+}
+
+.input-div {
+	min-width: calc(50% - 30px);
+	padding: 10px;
+	margin-right: 10px;
+}
+
+.input-div>input {
+	width: 100%;
+	padding: 10px;
+}
+
+#remove-record-content-area {
+	flex-direction: column;
+	height: 60%
+}
+
+#remove-record-content-area > div {
+	text-align: center;
+	font-size: 18px;
+	padding: 10px;
+}
+
+.alert-message{
+	color: red;
+	flex-direction: column;
+}
+#remove-record-footer button{
+	margin-right: 10px;
+	width: 100px;
+	height: fit-content;
+}
+#remove-record-footer{
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-end;
+	width: 100%;
+}
+#remove-record-footer> div{
+	width: 50%;
+	padding: 10px;
+	display: flex;
+	justify-content: flex-end;
+
+}
+
+table {
+	width: 100%;
+	border-collapse: collapse;
+	margin-top: 20px;
+}
+th, td {
+	border: 1px solid;
+	text-align: center;
+}
+
+/* Modal Container in Two Columns */
+.modal-container {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 10px;
+	margin-top: 10px;
+}
+
+.modal {
+	border: 1px solid #ddd;
+	padding: 10px;
+	background-color: #f9f9f9;
+	border-radius: 4px;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+	font-size: 14px;
+}
+
+.modal label {
+	display: block;
+	margin-top: 10px;
+	font-weight: bold;
+	color: #333;
+}
+
+.popupModal {
+	display: none;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 400px;
+	background: white;
+	padding: 20px;
+	z-index: 1001;
+	box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+	border-radius: 8px;
+}
+.popupOverlay {
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.5);
+	z-index: 1000;
+}
+
+.close-btn {
+	display: inline-block;
+	margin-top: 10px;
+	padding: 8px 12px;
+	background-color: #f44336;
+	color: white;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+}

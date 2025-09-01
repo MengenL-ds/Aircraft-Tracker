@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="style.css">
+	<script src="script.js"></script>
+	<title>Mission</title>
+</head>
+<body>
+	<div class="menu-header">
+		<h2>Missions</h2>
+	</div>
+	<div class="row content-area">
+		<div class="modal-container">
+			<div class="modal">
+				<h3>Assign crew and squadron to mission</h3>
+				<label >crew ID:</label>
+				<input type="text" id="crewID">
+
+				<label >mission ID:</label>
+				<input type="text" id="missionID">
+
+				<label >squadron ID:</label>
+				<input type="text" id="squadronID">
+
+				<button onclick="assignCrewInSquadronToMission()">Submit</button>
+			</div>
+		</div>
+		<table id="missionTable">
+			<thead>
+			<tr>
+				<th>Mission ID</th>
+				<th>Date</th>
+				<th>Location</th>
+				<th>Weather</th>
+				<th>Outcome</th>
+				<th>Duration</th>
+				<th>crewID</th>
+				<th>squadronID</th>
+			</tr>
+			</thead>
+			<tbody>
+			<!-- Table data will be inserted here by JavaScript -->
+			</tbody>
+		</table>
+	</div>
+	<div class="row footer">
+		<button class="button" onclick="window.location.href = 'index.html';">Cancel</button>
+	</div>
+</body>
+</html>

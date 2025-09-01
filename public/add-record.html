@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="style.css">
+	<script src="script.js"></script>
+	<title>Add-Record</title>
+</head>
+<body onload="updateFields()">
+<div class="menu-header">
+	<h2>Add New Record</h2>
+</div>
+<div class="row" id="add-record-content-area">
+	<div id="category-div">
+		<label>Category</label>
+		<select id="category-select" onchange="updateFields()">
+			<option value="aircrafts">Aircrafts</option>
+			<option value="mechanics">Mechanics</option>
+			<option value="crew">Pilots & Crews</option>
+			<option value="missions">Missions</option>
+			<option value="maintenance">Maintenance</option>
+		</select>
+	</div>
+	<div id="add-record-details-div">
+		<div class="input-div"><input type="text" placeholder="Enter Details Here"></div>
+		<div class="input-div"><input type="text" placeholder="Enter Details Here"></div>
+		<div class="input-div"><input type="text" placeholder="Enter Details Here"></div>
+		<div class="input-div"><input type="text" placeholder="Enter Details Here"></div>
+		<div class="input-div"><input type="text" placeholder="Enter Details Here"></div>
+		<div class="input-div"><input type="text" placeholder="Enter Details Here"></div>
+		<div class="input-div"><input type="text" placeholder="Enter Details Here"></div>
+		<div class="input-div"><input type="text" placeholder="Enter Details Here"></div>
+	</div>
+</div>
+<div class="row footer">
+	<button class="button" onclick="window.location.href = 'index.html';">Cancel</button>
+	<button class="button button-large" id="submit-button">Add to Database</button>
+</div>
+</body>
+</html>

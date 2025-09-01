@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="style.css">
+	<script src="script.js"></script>
+	<title>Pilot</title>
+</head>
+<body>
+	<div class="menu-header">
+		<h2>Pilots & Crews</h2>
+	</div>
+	<div class="row content-area">
+		<div class="item-list">
+			<ul>
+				<li>
+					Crew who have flown in every mission
+					<button onclick="getVeterans()">
+						Get veterans
+					</button>
+				</li>
+				<li>
+					Roles that have a large number of crew members (> 5)
+					<button onclick="getExcessRoles()">
+						Get excess roles
+					</button>
+				</li>
+			</ul>
+		</div>
+		<div class="modal-container">
+			<div class="modal">
+				<h3>Assign aircraft</h3>
+
+				<label >Aircraft ID:</label>
+				<input type="text" id="aircraftID" required>
+
+				<label >crew ID:</label>
+				<input type="text" id="crewID" required>
+
+				<button onclick="assignCrewToAircraft()">Submit</button>
+			</div>
+			<div class="modal">
+				<h3>Promote</h3>
+				<label >crew ID:</label>
+				<input type="text" id="promoteCrewID" required>
+
+				<label >New Rank:</label>
+				<input type="text" id="rank" required>
+
+				<button onclick="updateRank()">Submit</button>
+			</div>
+		</div>
+		<table id="crewTable">
+			<thead>
+			<tr>
+				<th>Crew ID</th>
+				<th>Name</th>
+				<th>Role</th>
+				<th>Rank</th>
+				<th>squadronID</th>
+				<th>missionID</th>
+				<th>aircraftID</th>
+			</tr>
+			</thead>
+			<tbody>
+			<!-- Table data -->
+			</tbody>
+		</table>
+	</div>
+	<!-- Popup Overlay -->
+	<div id="popupOverlay" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5); z-index: 1000;"></div>
+	<!-- Popup Modal -->
+	<div id="popupModal" style="display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 400px; background: white; padding: 20px; z-index: 1001; box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); border-radius: 8px;">
+		<h2>Popup Title</h2>
+		<p>Popup Content Here</p>
+		<button onclick="closePopup()">Close</button>
+	</div>
+	<div class="row footer">
+		<button class="button" onclick="window.location.href = 'index.html';">Cancel</button>
+	</div>
+</body>
+</html>
