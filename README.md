@@ -55,7 +55,13 @@ The database and application provide the following capabilities:
 
 > Note: The listed libraries are potential tools; not all may be implemented. The stack may evolve as development progresses.
 
----
+## ERD Diagram
+
+![ERD](Milestone_1/ER_diagram.png)
+
+## UI
+
+![UI](Milestone_3/UI.drawio.png)
 
 ## Getting Started
 
@@ -90,7 +96,7 @@ Make sure you have the following installed on your system:
 
 4. **Configure environment variables**
     - Create a .env file in the root directory with the following values:
-    ````
+    ```
     DB_USER=your_db_username
     DB_PASSWORD=your_db_password
     DB_HOST=localhost
