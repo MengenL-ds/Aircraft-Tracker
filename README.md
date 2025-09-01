@@ -1,4 +1,4 @@
-# ✈️ AircraftTracker
+# AircraftTracker
 
 ## Overview
 **AircraftTracker** is a database-driven application for managing the **maintenance, operations, and assignments of military aircraft and crews**.  
@@ -14,7 +14,7 @@ While initially scoped for **WW2 fighter and bomber aircraft**, the design can b
 
 ---
 
-## 📊 Domain Modeling
+## Domain Modeling
 The database models the following key aspects of the aviation domain:
 
 - **Aircraft Management** – Categorization of aircraft by type, model, and service history.  
@@ -26,7 +26,7 @@ The database models the following key aspects of the aviation domain:
 
 ---
 
-## 🚀 Functionality
+## Functionality
 The database and application provide the following capabilities:
 
 - Track aircraft registry and maintenance history.  
@@ -40,7 +40,7 @@ The database and application provide the following capabilities:
 
 ---
 
-## 🛠️ Technology Stack
+## Technology Stack
 
 **Database:**  
 - Oracle DB (relational database system)  
@@ -53,12 +53,58 @@ The database and application provide the following capabilities:
 - React Hook Form, React Spring  
 - Zustand (state management)  
 
-> ⚠️ Note: The listed libraries are potential tools; not all may be implemented. The stack may evolve as development progresses.
+> Note: The listed libraries are potential tools; not all may be implemented. The stack may evolve as development progresses.
 
 ---
 
-## 📦 Future Scope
-- Expand modeling to modern military and commercial aircraft.  
-- Add advanced analytics for predictive maintenance.  
-- Provide visual dashboards for mission readiness.  
-- Develop APIs for integration with external systems.  
+## Getting Started
+
+### Prerequisites
+Make sure you have the following installed on your system:
+- [Node.js](https://nodejs.org/) (LTS recommended, e.g. v18+)
+- npm (comes with Node.js) or yarn
+- [Oracle DB](https://www.oracle.com/database/) (used as the backend database)
+- A SQL client/tool to run schema files (e.g., `sqlplus`)
+
+---
+
+### Setup Instructions
+
+1. **Clone the repository**
+   ```
+   git clone https://github.com/MengenL-ds/Aircraft-Tracker.git
+   cd Aircraft-Tracker
+   ```
+
+2. **Install dependencies**
+    ```
+    npm install
+    ```
+
+3. **Set up the database**
+    - Create a new database in Oracle
+    - Run the schema file to create the required tables:
+    ```
+    sqlplus <username>/<password>@<connection_string> @project.sql
+    ```
+
+4. **Configure environment variables**
+    - Create a .env file in the root directory with the following values:
+    ````
+    DB_USER=your_db_username
+    DB_PASSWORD=your_db_password
+    DB_HOST=localhost
+    DB_PORT=1521
+    DB_NAME=aircraft_db
+    PORT=3000
+    ```
+
+5. **Start the app**
+    ```
+    node server.js
+    ```
+
+6. **Access the app**
+    - Open your desired browser and go to:
+    ```
+    http://localhost:3000
