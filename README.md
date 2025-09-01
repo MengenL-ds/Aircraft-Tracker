@@ -89,7 +89,7 @@ Make sure you have the following installed on your system:
 
 3. **Set up the database**
     - Create a new database in Oracle
-    - Run the schema file to create the required tables and insert sample tuples:
+    - Run the schema file to create the required tables:
     ```
     sqlplus <username>/<password>@<connection_string> @project.sql
     ```
